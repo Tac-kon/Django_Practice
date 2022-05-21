@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="utf-8">
+    <title>Django Sample blog</title>
+</head>
+<body>
+    <h1>Django Sample Blog</h1>
+    <div>
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a href="{% url 'detail' post.pk %}">
+                    {{ post.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
