@@ -1,8 +1,7 @@
 version: '3'
 
 services:
-  # python3:
-  web: 
+  python3:
     build:
       context: ./
       dockerfile: ./Dockerfile
