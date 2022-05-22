@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+from django.utils import timezone
 
 class Post(models.Model):
     id = models.AutoField(primary_key=True,
@@ -13,7 +14,11 @@ class Post(models.Model):
     content = models.TextField(null=False,
                                blank=True,
                                db_column='content')
-    create_at = models.DateTimeField(default=None,
+    image = models.ImageField(upload_to='images/',
+                              null=True,
+                              blank=True,
+                              db_column='image')
+    create_at = models.DateTimeField(default=timezone.now,
                                      null=False,
                                      blank=False,
                                      db_column='create_at')
