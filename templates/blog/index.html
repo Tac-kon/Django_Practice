@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Django Sample blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Django Sample Blog</h1>
-    <div>
-        <ul>
+    <div class="container">
+        <h1>Django Sample Blog</h1>
+        <ul class="list-group">
             {% for post in posts %}
-            <li>
-                <a href="{% url 'detail' post.pk %}">
+            <li class="list-group-item list-group-item-action">
+                <a href="{% url 'detail' post.pk %}" class="d-block text-reset text-decoration-none">
                     {{ post.title }}
                 </a>
             </li>

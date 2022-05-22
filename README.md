@@ -48,6 +48,15 @@ cd deployments/docker-compose
 docker-compose up  
 ```
 
+3. DBのマイグレーション
+```
+docker-compose exec python3 bash
+
+# python manage.py makemigrations
+# python manage.py migrate
+# python manage.py createsuperuser
+```
+
 4. アプリ終了
 ```
 cd deployments/docker-compose 
